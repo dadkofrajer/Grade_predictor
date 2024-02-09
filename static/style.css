@@ -1,0 +1,59 @@
+
+.section {
+    text-align: left;
+}
+
+body {
+    background-color: #4770ff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.form-control {
+    margin-left: 0.5px;
+    width: 20%;
+}
+
+.row {
+    margin-left: 1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+.btn-group {
+    background-color: #f5f5f5;
+    color: #212529;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+.btn-group .btn.active {
+    background-color: #007bff; /* Change to your desired color */
+    color: red; /* Change to your desired text color */
+}

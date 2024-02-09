@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Grade calculator</title>
+</head>
+<body>
+    <h1>This is the required term exam grade calculator!</h1>
+        <div class="container">
+                <h1>Let's get started!</h1>
+            <div class="section">
+                <h2>How many categories of grades do you have? </h2>
+                <form action="/" method="post">
+                    <div class="btn-group" role="group" >
+                        <button type="button" class="btn btn-outline-primary" onclick="setButtonValue(1)">1</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setButtonValue(2)">2</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setButtonValue(3)">3</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setButtonValue(4)">4</button>
+                    </div>
+                    <input type="hidden" id="groups" name="groups">
+                    <div class="section">
+                        <hr>
+                        <h2>Do you have a term exam grade ?</h2>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary" onclick="setExamValue(1)">yes</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setExamValue(0)">no</button>
+                    </div>
+                    <input type="hidden" name="exam" id="exam">
+                    <div class="section">
+                        <hr>
+                        <h2> What grade average do you want to have ? </h2>
+                    </div>
+                    <div class="row">
+                        <input class="form-control" name="grade_average" autocomplete="off" autofocus placeholder="69" type="text">
+                        <button type="submit" class="btn btn-primary ml-2 ">Submit</button>
+                    </div>
+                    <hr>
+                </form>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to handle click event and apply active class
+        const btnGroup = document.querySelector('.btn-group');
+
+        document.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.matches('.btn')) {
+            const btnGroup = target.closest('.btn-group');
+            if (btnGroup) {
+                btnGroup.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+                target.classList.add('active');
+            }
+        }
+        });
+        function setButtonValue(value) {
+        document.getElementById('groups').value = value;
+        }
+        function setExamValue(value) {
+            let m;
+        if (value === 1) {
+        m = "yes";
+        } else {
+        m = "no";
+        }
+        document.getElementById('exam').value = m;
+        }
+    </script>
+
+

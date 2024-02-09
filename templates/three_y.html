@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Grade calculator</title>
+    </head>
+    <body>
+            <h1>This is the required term exam grade calculator!</h1>
+    <form action="/three_y" method="post">
+        <h2>Term Exam Grade</h2>
+        <input class="form-control" name="exam_grade" autocomplete="off" autofocus placeholder="69" type="text">
+        <h2>Grade in 2. Category</h2>
+        <input class="form-control" name="2_cat" autocomplete="off" autofocus placeholder="69" type="text">
+        <h2>Grade in 3. Category</h2>
+        <div class="row">
+        <input class="form-control" name="3_cat" autocomplete="off" autofocus placeholder="69" type="text">
+        <button type="submit" class="btn btn-primary ml-2 ">Submit</button>
+        </div>
+    </form>
+
+
